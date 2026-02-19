@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Open Talent Protocol – an open, machine-first standard for professional profiles in agentic talent marketplaces." />
+  <meta property="og:title" content="Open Talent Protocol" />
+  <meta property="og:description" content="An open, agent-ready standard for professional profiles. MIT licensed. Vendor-neutral." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://opentalentprotocol.org" />
+  <title>Open Talent Protocol – An open, agent-ready resume standard</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%232563eb'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='system-ui' font-size='18' font-weight='700' fill='white'>OT</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+     Top navigation
+     ============================================================ -->
+<nav class="top-nav">
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-name">Open Talent Protocol</span>
+    <span class="nav-version">v0.1</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#schema">Schema</a></li>
+    <li><a href="#examples">Examples</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="https://github.com/neogene-ai/open-talent-protocol" class="nav-github" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub
+    </a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     Layout wrapper
+     ============================================================ -->
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Getting started</div>
+      <ul class="sidebar-nav">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#design-goals">Design goals</a></li>
+        <li><a href="#quick-start">Quick start</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Schema</div>
+      <ul class="sidebar-nav">
+        <li><a href="#meta">meta</a></li>
+        <li><a href="#identity">identity</a></li>
+        <li><a href="#summary">summary</a></li>
+        <li><a href="#work">work</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#credentials">credentials</a></li>
+        <li><a href="#languages">languages</a></li>
+        <li><a href="#preferences">preferences</a></li>
+        <li><a href="#evidence">evidence</a></li>
+        <li><a href="#verification">verification</a></li>
+        <li><a href="#visibility">visibility</a></li>
+        <li><a href="#custom">custom</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Resources</div>
+      <ul class="sidebar-nav">
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#tools">Tools &amp; validator</a></li>
+        <li><a href="#migration">Migration guides</a></li>
+        <li><a href="#governance">Governance</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main">
+  <div class="content-wrap">
+
+    <!-- ======================================================
+         Hero
+         ====================================================== -->
+    <section class="hero" id="overview">
+      <span class="hero-eyebrow">Open Standard · MIT License · v0.1</span>
+      <h1>Open Talent Protocol</h1>
+      <p class="hero-tagline">
+        A machine-first, vendor-neutral JSON standard for professional profiles —
+        designed for humans, agents, and the agentic talent marketplaces of tomorrow.
+      </p>
+      <div class="hero-actions">
+        <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/schema/opentalent-protocol.schema.json"
+           class="btn btn-primary" target="_blank" rel="noopener">View schema</a>
+        <a href="https://github.com/neogene-ai/open-talent-protocol"
+           class="btn btn-outline" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="#quick-start" class="btn btn-outline">Quick start</a>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Why
+         ====================================================== -->
+    <section class="spec-section" id="design-goals">
+      <h2>Why Open Talent Protocol?</h2>
+      <hr class="section-divider" />
+
+      <p>
+        Existing resume formats — PDF, Word, LinkedIn exports — were designed for humans
+        reading documents. As autonomous hiring agents and career assistants become real,
+        we need a format that software can reason over reliably.
+      </p>
+
+      <p>
+        Open Talent Protocol (OTP) is that format. It encodes the things that matter
+        to agents: structured preferences for matching, verification and provenance for trust,
+        and privacy controls so candidates decide what to share and with whom.
+      </p>
+
+      <table class="prop-table" style="margin-top:1.25rem">
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>What it means in practice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">Machine-first</td>
+            <td class="prop-desc">JSON is the canonical format. PDF/HTML rendering is out of scope and done by separate tooling.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">Candidate-controlled</td>
+            <td class="prop-desc">The <code>visibility</code> section is first-class. Candidates decide what to share, with whom, and when.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">Agent-ready</td>
+            <td class="prop-desc"><code>preferences</code>, <code>verification</code>, and <code>impact</code> are structured fields agents can act on — not prose to be parsed.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">Vendor-neutral</td>
+            <td class="prop-desc">MIT licensed. No required registry, platform, or identity provider.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">Interoperable</td>
+            <td class="prop-desc">Clearly mappable to JSON Resume, HR-XML, and schema.org vocabularies.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ======================================================
+         Quick start
+         ====================================================== -->
+    <section class="spec-section" id="quick-start">
+      <h2>Quick start</h2>
+      <hr class="section-divider" />
+
+      <h3>Validate a document</h3>
+      <p>The validator CLI checks any JSON file against the schema and prints readable errors.</p>
+<pre>
+<span class="json-punct"># Install and build the validator</span>
+git clone https://github.com/neogene-ai/open-talent-protocol.git
+cd open-talent-protocol/tools/validator-cli
+npm install &amp;&amp; npm run build
+
+<span class="json-punct"># Validate one of the example documents</span>
+node dist/index.js ../../examples/developer-junior.json
+<span class="json-punct">✓ Valid Open Talent Protocol document</span>
+</pre>
+
+      <h3>Minimal valid document</h3>
+      <p>Only <code>meta</code> and <code>identity</code> are required. Everything else is optional.</p>
+<pre>
+{
+  <span class="json-key">"meta"</span>: {
+    <span class="json-key">"schemaVersion"</span>: <span class="json-str">"0.1"</span>,
+    <span class="json-key">"language"</span>: <span class="json-str">"en"</span>,
+    <span class="json-key">"source"</span>: <span class="json-str">"user"</span>
+  },
+  <span class="json-key">"identity"</span>: {
+    <span class="json-key">"fullName"</span>: <span class="json-str">"Ada Lovelace"</span>,
+    <span class="json-key">"contact"</span>: {
+      <span class="json-key">"email"</span>: <span class="json-str">"ada@example.com"</span>,
+      <span class="json-key">"location"</span>: { <span class="json-key">"city"</span>: <span class="json-str">"London"</span>, <span class="json-key">"country"</span>: <span class="json-str">"GB"</span> }
+    }
+  }
+}
+</pre>
+    </section>
+
+    <!-- ======================================================
+         Schema reference
+         ====================================================== -->
+    <section class="spec-section" id="schema">
+      <h2>Schema reference</h2>
+      <hr class="section-divider" />
+      <p>
+        The full schema is a JSON Schema (draft 2020-12) document at
+        <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/schema/opentalent-protocol.schema.json"
+           target="_blank" rel="noopener"><code>schema/opentalent-protocol.schema.json</code></a>.
+        Below, each section is documented with its fields, types, and intent.
+      </p>
+
+      <div class="callout">
+        <strong>Tip:</strong> Only <code>meta</code> and <code>identity</code> are required at the top level.
+        All other sections are optional, so you can start minimal and add richness incrementally.
+      </div>
+    </section>
+
+    <!-- ---- meta ------------------------------------------- -->
+    <section class="spec-section" id="meta">
+      <div class="section-meta">
+        <h2>meta</h2>
+        <span class="badge badge-required">required</span>
+      </div>
+      <p>Document-level metadata describing the schema version, language, and provenance of the document itself.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">schemaVersion</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">Must be <code>"0.1"</code>. Used by parsers to select the correct validation rules.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">language</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">BCP 47 language tag of the document's primary language. Default: <code>"en"</code>.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">lastUpdated</td>
+            <td class="prop-type">date-time</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">ISO 8601 timestamp of the last modification.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">source</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">System or actor that last wrote this document. Examples: <code>"user"</code>, <code>"import:jsonresume"</code>, <code>"agent"</code>.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">dataController</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Legal data controller responsible for this document (GDPR Art. 4(7) hook). May be a name, URI, or platform-assigned ID.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">subjectId</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Stable, portable identifier for the human subject. Not necessarily an email; may be a DID or platform ID. Enables de-duplication and agent ownership.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- identity --------------------------------------- -->
+    <section class="spec-section" id="identity">
+      <div class="section-meta">
+        <h2>identity</h2>
+        <span class="badge badge-required">required</span>
+      </div>
+      <p>Core personal and contact information. The only required property within <code>identity</code> is <code>fullName</code>.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">fullName</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">Legal full name.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">preferredName</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Name the person prefers to be called (first name or nickname).</td>
+          </tr>
+          <tr>
+            <td class="prop-name">pronouns</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Preferred pronouns, free-form. Examples: <code>"she/her"</code>, <code>"they/them"</code>.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">contact</td>
+            <td class="prop-type">object</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Contains <code>email</code>, <code>phone</code>, <code>location</code> (city / region / country / postalCode), and <code>timezone</code> (IANA name).</td>
+          </tr>
+          <tr>
+            <td class="prop-name">profiles</td>
+            <td class="prop-type">array</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Online profiles. Each item: <code>network</code> (e.g. <code>"github"</code>), <code>url</code>, optional <code>username</code>.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">workAuthorization</td>
+            <td class="prop-type">object</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Contains <code>description</code> (free text), <code>authorizedCountries</code> (ISO 3166-1 alpha-2 array), and <code>requiresSponsorship</code> (boolean).</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- summary ---------------------------------------- -->
+    <section class="spec-section" id="summary">
+      <div class="section-meta">
+        <h2>summary</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>
+        A short professional summary written in first or third person. Plain text only — no markup.
+        Agents may use this as context in a system prompt but should not rely on it for structured matching;
+        use <code>preferences</code> and <code>skills</code> for that.
+      </p>
+    </section>
+
+    <!-- ---- work ------------------------------------------- -->
+    <section class="spec-section" id="work">
+      <div class="section-meta">
+        <h2>work</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Chronological work history array, most recent first. Each entry represents one position.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">organization</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">Employer or client name.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">role</td>
+            <td class="prop-type">string</td>
+            <td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">Job title or role name.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">startDate</td>
+            <td class="prop-type">date</td>
+            <td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">ISO 8601 date (YYYY-MM-DD).</td>
+          </tr>
+          <tr>
+            <td class="prop-name">endDate</td>
+            <td class="prop-type">date</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Omit if current; use <code>current: true</code> instead.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">current</td>
+            <td class="prop-type">boolean</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Set to <code>true</code> for current position.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">employmentType</td>
+            <td class="prop-type">enum</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              One of:
+              <div class="enum-list">
+                <span class="enum-val">full-time</span><span class="enum-val">part-time</span><span class="enum-val">contract</span>
+                <span class="enum-val">freelance</span><span class="enum-val">internship</span><span class="enum-val">volunteer</span><span class="enum-val">other</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="prop-name">highlights</td>
+            <td class="prop-type">string[]</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Bullet-point accomplishments. Plain text.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">impact</td>
+            <td class="prop-type">array</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Quantified impact objects. Each: <code>metric</code>, <code>value</code> (string), optional <code>period</code>. Designed for agent-driven ranking.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">tags</td>
+            <td class="prop-type">string[]</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">Free-form domain or technology tags for search and matching.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">verification</td>
+            <td class="prop-type">object</td>
+            <td class="prop-req req-no">no</td>
+            <td class="prop-desc">See <a href="#verification">verification object</a>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- education -------------------------------------- -->
+    <section class="spec-section" id="education">
+      <div class="section-meta">
+        <h2>education</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Formal education history. Each entry requires <code>institution</code> and <code>degree</code>.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">institution</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Name of the institution.</td></tr>
+          <tr><td class="prop-name">degree</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Degree type, e.g. <code>"Bachelor of Science"</code>, <code>"Ausbildung"</code>.</td></tr>
+          <tr><td class="prop-name">field</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Field or major of study.</td></tr>
+          <tr><td class="prop-name">startDate / endDate</td><td class="prop-type">date</td><td class="prop-req req-no">no</td><td class="prop-desc">ISO 8601 dates.</td></tr>
+          <tr><td class="prop-name">grade</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Final grade in the institution's own notation.</td></tr>
+          <tr><td class="prop-name">highlights</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Thesis, clubs, awards, relevant courses.</td></tr>
+          <tr><td class="prop-name">verification</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc">See <a href="#verification">verification object</a>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- skills ----------------------------------------- -->
+    <section class="spec-section" id="skills">
+      <div class="section-meta">
+        <h2>skills</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>
+        Normalized skill inventory. Designed to be machine-matchable across profiles —
+        use canonical names (<code>"TypeScript"</code> not <code>"TS"</code>) and consistent levels.
+      </p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">name</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Canonical skill name.</td></tr>
+          <tr>
+            <td class="prop-name">level</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              <div class="enum-list">
+                <span class="enum-val">beginner</span><span class="enum-val">intermediate</span><span class="enum-val">advanced</span><span class="enum-val">expert</span>
+              </div>
+            </td>
+          </tr>
+          <tr><td class="prop-name">category</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">E.g. <code>"programming language"</code>, <code>"framework"</code>, <code>"soft skill"</code>, <code>"clinical"</code>.</td></tr>
+          <tr><td class="prop-name">lastUsed</td><td class="prop-type">date</td><td class="prop-req req-no">no</td><td class="prop-desc">When this skill was last actively used.</td></tr>
+          <tr><td class="prop-name">yearsOfExperience</td><td class="prop-type">number</td><td class="prop-req req-no">no</td><td class="prop-desc">Approximate years of practical experience.</td></tr>
+          <tr><td class="prop-name">verification</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc">See <a href="#verification">verification object</a>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- projects --------------------------------------- -->
+    <section class="spec-section" id="projects">
+      <div class="section-meta">
+        <h2>projects</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Selected personal, open-source, or professional projects that demonstrate skills.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">name</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Project name.</td></tr>
+          <tr><td class="prop-name">description</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">What the project does and why it matters. Plain text.</td></tr>
+          <tr><td class="prop-name">role</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">The person's role in the project.</td></tr>
+          <tr><td class="prop-name">technologies</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Technologies or tools used.</td></tr>
+          <tr><td class="prop-name">links</td><td class="prop-type">array</td><td class="prop-req req-no">no</td><td class="prop-desc">Each item: <code>label</code> (e.g. <code>"GitHub"</code>) and <code>url</code>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- credentials ------------------------------------ -->
+    <section class="spec-section" id="credentials">
+      <div class="section-meta">
+        <h2>credentials</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Degrees, professional certifications, and regulated licenses.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">name</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Credential name, e.g. <code>"AWS Certified Solutions Architect"</code>, <code>"RN License"</code>.</td></tr>
+          <tr><td class="prop-name">issuer</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Issuing organization.</td></tr>
+          <tr><td class="prop-name">issueDate</td><td class="prop-type">date</td><td class="prop-req req-no">no</td><td class="prop-desc">Date of issue.</td></tr>
+          <tr><td class="prop-name">expiryDate</td><td class="prop-type">date</td><td class="prop-req req-no">no</td><td class="prop-desc">Expiry date, if applicable.</td></tr>
+          <tr><td class="prop-name">credentialId</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Certificate or license ID for public verification.</td></tr>
+          <tr><td class="prop-name">url</td><td class="prop-type">uri</td><td class="prop-req req-no">no</td><td class="prop-desc">Link to the credential record or badge.</td></tr>
+          <tr><td class="prop-name">verification</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc">See <a href="#verification">verification object</a>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- languages -------------------------------------- -->
+    <section class="spec-section" id="languages">
+      <div class="section-meta">
+        <h2>languages</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Human language proficiencies.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">code</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">BCP 47 language tag, e.g. <code>"de"</code>, <code>"pt-BR"</code>.</td></tr>
+          <tr><td class="prop-name">name</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Human-readable name, e.g. <code>"German"</code>.</td></tr>
+          <tr>
+            <td class="prop-name">level</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              CEFR scale:
+              <div class="enum-list">
+                <span class="enum-val">A1</span><span class="enum-val">A2</span><span class="enum-val">B1</span><span class="enum-val">B2</span><span class="enum-val">C1</span><span class="enum-val">C2</span><span class="enum-val">native</span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- preferences ------------------------------------ -->
+    <section class="spec-section" id="preferences">
+      <div class="section-meta">
+        <h2>preferences</h2>
+        <span class="badge badge-optional">optional</span>
+        <span class="badge badge-new">agent-critical</span>
+      </div>
+
+      <p>
+        Job search preferences — the primary input for agentic matching. Agents filter on
+        <code>preferences</code> before reading work history. This is the most important section
+        for agentic marketplace use cases.
+      </p>
+
+      <div class="callout">
+        <strong>Design note:</strong> An OTP-compliant agent must not present a role to a candidate
+        whose <code>constraints</code> the role violates. This is a hard rule, not a hint.
+      </div>
+
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">desiredRoles</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Job titles or role types the candidate is actively seeking.</td></tr>
+          <tr><td class="prop-name">industries</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Industries or verticals of interest.</td></tr>
+          <tr><td class="prop-name">locations</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Preferred cities, regions, or countries.</td></tr>
+          <tr>
+            <td class="prop-name">workModes</td><td class="prop-type">enum[]</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              <div class="enum-list">
+                <span class="enum-val">remote</span><span class="enum-val">hybrid</span><span class="enum-val">onsite</span>
+              </div>
+            </td>
+          </tr>
+          <tr><td class="prop-name">salary</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc"><code>min</code>, <code>max</code> (numbers), <code>currency</code> (ISO 4217), <code>period</code> (annual/monthly/daily/hourly), <code>negotiable</code> (boolean).</td></tr>
+          <tr>
+            <td class="prop-name">workHours</td><td class="prop-type">enum[]</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              <div class="enum-list">
+                <span class="enum-val">full-time</span><span class="enum-val">part-time</span><span class="enum-val">contract</span><span class="enum-val">freelance</span>
+              </div>
+            </td>
+          </tr>
+          <tr><td class="prop-name">constraints</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc"><code>noticePeriod</code>, <code>availableFrom</code> (date), <code>travelWillingness</code> (none/occasional/frequent), <code>notes</code> (free text for non-negotiables).</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- evidence --------------------------------------- -->
+    <section class="spec-section" id="evidence">
+      <div class="section-meta">
+        <h2>evidence</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>Reusable portfolio artifacts and proof-of-work items. Each item is linked to specific skills.</p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">type</td><td class="prop-type">enum</td><td class="prop-req req-yes">yes</td>
+            <td class="prop-desc">
+              <div class="enum-list">
+                <span class="enum-val">code</span><span class="enum-val">article</span><span class="enum-val">portfolio</span>
+                <span class="enum-val">test-result</span><span class="enum-val">publication</span><span class="enum-val">talk</span><span class="enum-val">other</span>
+              </div>
+            </td>
+          </tr>
+          <tr><td class="prop-name">title</td><td class="prop-type">string</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Title of the artifact.</td></tr>
+          <tr><td class="prop-name">url</td><td class="prop-type">uri</td><td class="prop-req req-yes">yes</td><td class="prop-desc">Link to the artifact.</td></tr>
+          <tr><td class="prop-name">description</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">What this artifact demonstrates.</td></tr>
+          <tr><td class="prop-name">relatedSkills</td><td class="prop-type">string[]</td><td class="prop-req req-no">no</td><td class="prop-desc">Names of skills (from <code>skills[]</code>) this artifact supports.</td></tr>
+          <tr><td class="prop-name">issuer</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Platform or organization hosting this artifact.</td></tr>
+          <tr><td class="prop-name">verification</td><td class="prop-type">object</td><td class="prop-req req-no">no</td><td class="prop-desc">See <a href="#verification">verification object</a>.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- verification ----------------------------------- -->
+    <section class="spec-section" id="verification">
+      <div class="section-meta">
+        <h2>verification</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>
+        Provenance and trust metadata. Appears in two places:
+        (1) as a top-level section recording document-level provenance, and
+        (2) as an optional nested object on individual <code>work</code>, <code>education</code>,
+        <code>skills</code>, <code>credentials</code>, and <code>evidence</code> items.
+      </p>
+
+      <h3>Document-level fields</h3>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td class="prop-name">createdBy</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td><td class="prop-desc"><span class="enum-val">user</span> <span class="enum-val">platform</span> <span class="enum-val">agent</span> <span class="enum-val">import</span></td></tr>
+          <tr><td class="prop-name">createdAt</td><td class="prop-type">date-time</td><td class="prop-req req-no">no</td><td class="prop-desc">When the document was first created.</td></tr>
+          <tr><td class="prop-name">updatedBy</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Actor that last updated the document.</td></tr>
+          <tr><td class="prop-name">integrity</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Content hash for tamper detection. Format: <code>"&lt;algorithm&gt;:&lt;hex-digest&gt;"</code>, e.g. <code>"sha256:abc123…"</code>. Informational in v0.1.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Item-level verification object</h3>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">level</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              How this item was verified:
+              <div class="enum-list">
+                <span class="enum-val">self</span><span class="enum-val">test</span><span class="enum-val">issuer</span><span class="enum-val">platform</span>
+              </div>
+              <code>self</code> = self-reported · <code>test</code> = passed an assessment · <code>issuer</code> = confirmed by the credential issuer · <code>platform</code> = verified by the hosting platform.
+            </td>
+          </tr>
+          <tr><td class="prop-name">issuerName</td><td class="prop-type">string</td><td class="prop-req req-no">no</td><td class="prop-desc">Name of the verifying entity.</td></tr>
+          <tr><td class="prop-name">issuerType</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td><td class="prop-desc"><span class="enum-val">company</span> <span class="enum-val">school</span> <span class="enum-val">cert-provider</span> <span class="enum-val">platform</span> <span class="enum-val">other</span></td></tr>
+          <tr><td class="prop-name">issuedAt</td><td class="prop-type">date</td><td class="prop-req req-no">no</td><td class="prop-desc">When the verification was performed.</td></tr>
+          <tr><td class="prop-name">url</td><td class="prop-type">uri</td><td class="prop-req req-no">no</td><td class="prop-desc">Link to the verification artifact or badge.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ---- visibility ------------------------------------- -->
+    <section class="spec-section" id="visibility">
+      <div class="section-meta">
+        <h2>visibility</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>
+        Privacy controls. Set a default visibility level for the whole document, then override
+        specific fields using JSON Pointer paths.
+      </p>
+      <table class="prop-table">
+        <thead><tr><th>Property</th><th>Type</th><th>Req.</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">defaultVisibility</td><td class="prop-type">enum</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              Baseline for the document:
+              <div class="enum-list">
+                <span class="enum-val">public</span><span class="enum-val">recruiters</span><span class="enum-val">private</span>
+              </div>
+              <code>public</code> = anyone · <code>recruiters</code> = authenticated employer-side actors · <code>private</code> = owner only.
+            </td>
+          </tr>
+          <tr>
+            <td class="prop-name">overrides</td><td class="prop-type">array</td><td class="prop-req req-no">no</td>
+            <td class="prop-desc">
+              Array of <code>{ path, visibility }</code> objects. <code>path</code> is a
+              <a href="https://www.rfc-editor.org/rfc/rfc6901" target="_blank" rel="noopener">JSON Pointer</a>
+              (RFC 6901), e.g. <code>"/identity/contact/phone"</code>. Overrides apply on top of
+              <code>defaultVisibility</code>.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+<pre>
+<span class="json-key">"visibility"</span>: {
+  <span class="json-key">"defaultVisibility"</span>: <span class="json-str">"recruiters"</span>,
+  <span class="json-key">"overrides"</span>: [
+    { <span class="json-key">"path"</span>: <span class="json-str">"/identity/contact/phone"</span>, <span class="json-key">"visibility"</span>: <span class="json-str">"private"</span> },
+    { <span class="json-key">"path"</span>: <span class="json-str">"/preferences/salary"</span>,          <span class="json-key">"visibility"</span>: <span class="json-str">"recruiters"</span> }
+  ]
+}
+</pre>
+    </section>
+
+    <!-- ---- custom ----------------------------------------- -->
+    <section class="spec-section" id="custom">
+      <div class="section-meta">
+        <h2>custom</h2>
+        <span class="badge badge-optional">optional</span>
+      </div>
+      <p>
+        A free extension object for domain-specific or proprietary fields. Use namespaced keys
+        to avoid collisions with future spec additions.
+      </p>
+<pre>
+<span class="json-key">"custom"</span>: {
+  <span class="json-key">"jobgrow:talentScore"</span>: <span class="json-num">94</span>,
+  <span class="json-key">"myapp:internalId"</span>: <span class="json-str">"cand-00421"</span>
+}
+</pre>
+      <p>Adding data to <code>custom</code> never breaks a conforming parser. Removing <code>custom</code> never breaks core functionality.</p>
+    </section>
+
+    <!-- ======================================================
+         Examples
+         ====================================================== -->
+    <section class="spec-section" id="examples">
+      <h2>Examples</h2>
+      <hr class="section-divider" />
+      <p>
+        Three complete, schema-conforming documents are included in the repository. They illustrate
+        how <code>preferences</code>, <code>verification</code>, and <code>visibility</code> are used
+        in practice, and demonstrate that the schema is not developer-centric.
+      </p>
+      <div class="examples-grid">
+        <a class="example-card"
+           href="https://github.com/neogene-ai/open-talent-protocol/blob/main/examples/developer-junior.json"
+           target="_blank" rel="noopener">
+          <div class="example-card-role">Software Engineering</div>
+          <div class="example-card-name">Lukas Bauer</div>
+          <div class="example-card-desc">Junior frontend developer in Berlin. Includes a Codility test-result verification.</div>
+        </a>
+        <a class="example-card"
+           href="https://github.com/neogene-ai/open-talent-protocol/blob/main/examples/product-manager-senior.json"
+           target="_blank" rel="noopener">
+          <div class="example-card-role">Product Management</div>
+          <div class="example-card-name">Sofia Marchetti</div>
+          <div class="example-card-desc">Head of Product in EU fintech. Impact metrics and platform-level verification.</div>
+        </a>
+        <a class="example-card"
+           href="https://github.com/neogene-ai/open-talent-protocol/blob/main/examples/nurse-midcareer.json"
+           target="_blank" rel="noopener">
+          <div class="example-card-role">Healthcare</div>
+          <div class="example-card-name">Marta Kowalczyk</div>
+          <div class="example-card-desc">Mid-career oncology nurse in Warsaw. Licensed credentials and shift constraints.</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         Tools
+         ====================================================== -->
+    <section class="spec-section" id="tools">
+      <h2>Tools</h2>
+      <hr class="section-divider" />
+
+      <h3>Validator CLI</h3>
+      <p>
+        A Node.js CLI that validates any JSON file against the OTP schema and prints readable errors.
+        Source: <a href="https://github.com/neogene-ai/open-talent-protocol/tree/main/tools/validator-cli"
+                   target="_blank" rel="noopener"><code>tools/validator-cli/</code></a>
+      </p>
+<pre>
+cd tools/validator-cli
+npm install &amp;&amp; npm run build
+node dist/index.js path/to/profile.json
+</pre>
+
+      <h3>Agent tools</h3>
+      <p>
+        TypeScript stubs for integrating OTP into MCP-compatible agent frameworks.
+        Source: <a href="https://github.com/neogene-ai/open-talent-protocol/tree/main/tools/agent-examples"
+                   target="_blank" rel="noopener"><code>tools/agent-examples/</code></a>
+      </p>
+      <p>
+        Provides two composable functions ready to be registered as MCP tools:
+        <code>validateProfile</code> and <code>introspectProfile</code>.
+      </p>
+    </section>
+
+    <!-- ======================================================
+         Migration
+         ====================================================== -->
+    <section class="spec-section" id="migration">
+      <h2>Migration</h2>
+      <hr class="section-divider" />
+      <p>OTP is designed to be clearly mappable to and from existing formats.</p>
+
+      <table class="prop-table">
+        <thead><tr><th>Format</th><th>Guide</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="prop-name">JSON Resume</td>
+            <td><a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/docs/migration-json-resume.md" target="_blank" rel="noopener">migration-json-resume.md</a></td>
+            <td class="prop-desc">Full field-by-field table. OTP is a superset; mapping is lossless for all core fields.</td>
+          </tr>
+          <tr>
+            <td class="prop-name">HR-XML</td>
+            <td><a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/docs/migration-hrxml.md" target="_blank" rel="noopener">migration-hrxml.md</a></td>
+            <td class="prop-desc">High-level conceptual guide. Internal ATS fields (recruiter notes, workflow state) are intentionally dropped.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ======================================================
+         Governance
+         ====================================================== -->
+    <section class="spec-section" id="governance">
+      <h2>Governance &amp; neutrality</h2>
+      <hr class="section-divider" />
+      <p>
+        Open Talent Protocol is vendor-neutral. <a href="https://jobgrow.example.com" target="_blank" rel="noopener">JobGrow</a>
+        and neogene.ai are its initial sponsors, but the spec is designed for broad ecosystem adoption.
+        No single company has veto power over the schema.
+      </p>
+      <p>
+        The project is governed by a maintainer council using lazy consensus. See
+        <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/GOVERNANCE.md" target="_blank" rel="noopener">GOVERNANCE.md</a>
+        for the full process, and
+        <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/docs/governance-roadmap.md" target="_blank" rel="noopener">docs/governance-roadmap.md</a>
+        for the long-term direction (including possible neutral foundation hosting).
+      </p>
+      <p>Licensed under <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>. The spec will always be free to implement.</p>
+    </section>
+
+  </div><!-- /content-wrap -->
+  </main>
+</div><!-- /layout -->
+
+<!-- ============================================================
+     Footer
+     ============================================================ -->
+<footer class="site-footer">
+  <span>Open Talent Protocol is open source — <a href="https://github.com/neogene-ai/open-talent-protocol" target="_blank" rel="noopener">GitHub</a></span>
+  <nav class="footer-links">
+    <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/GOVERNANCE.md" target="_blank" rel="noopener">Governance</a>
+    <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Code of Conduct</a>
+    <a href="https://github.com/neogene-ai/open-talent-protocol/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+  </nav>
+</footer>
+
+<!-- Active sidebar link on scroll -->
+<script>
+  (function () {
+    var sections = document.querySelectorAll('.spec-section, .hero, section[id]');
+    var sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    var navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 56;
+
+    function getActive() {
+      var current = null;
+      sections.forEach(function (s) {
+        if (s.id && window.scrollY + navHeight + 40 >= s.offsetTop) {
+          current = s.id;
+        }
+      });
+      return current;
+    }
+
+    function updateActive() {
+      var id = getActive();
+      sidebarLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    }
+
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  })();
+</script>
+
+</body>
+</html>
