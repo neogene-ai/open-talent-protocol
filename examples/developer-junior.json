@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "schemaVersion": "0.1",
+    "language": "en",
+    "lastUpdated": "2026-02-01T10:00:00Z",
+    "source": "user"
+  },
+
+  "identity": {
+    "fullName": "Lukas Bauer",
+    "preferredName": "Lukas",
+    "pronouns": "he/him",
+    "contact": {
+      "email": "lukas.bauer@example.com",
+      "phone": "+49 176 12345678",
+      "location": {
+        "city": "Berlin",
+        "region": "Berlin",
+        "country": "DE",
+        "postalCode": "10115"
+      },
+      "timezone": "Europe/Berlin"
+    },
+    "profiles": [
+      {
+        "network": "github",
+        "url": "https://github.com/lukasbauer-dev",
+        "username": "lukasbauer-dev"
+      },
+      {
+        "network": "linkedin",
+        "url": "https://www.linkedin.com/in/lukas-bauer-dev"
+      }
+    ],
+    "workAuthorization": {
+      "description": "German citizen. Full EU work authorization. No sponsorship required.",
+      "authorizedCountries": ["DE", "AT", "CH", "FR", "NL", "PL"],
+      "requiresSponsorship": false
+    }
+  },
+
+  "summary": "Junior web developer with two years of hands-on experience building React and Node.js applications. Passionate about clean code, good developer experience, and open-source contributions. Currently working full-time at a Berlin fintech startup. Looking for a remote-friendly team where I can grow into a mid-level role.",
+
+  "work": [
+    {
+      "organization": "FinFlow GmbH",
+      "organizationUrl": "https://finflow.example.com",
+      "role": "Junior Frontend Developer",
+      "startDate": "2025-03-01",
+      "current": true,
+      "location": { "city": "Berlin", "country": "DE", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Built and maintained a React dashboard used by 4,000+ SME customers to track invoices and cashflow.",
+        "Migrated legacy jQuery components to React 18, reducing bundle size by 22%.",
+        "Introduced Vitest unit testing, bringing coverage from 12% to 54% within three months.",
+        "Collaborated with the design team to implement an accessible design system (WCAG 2.1 AA)."
+      ],
+      "impact": [
+        {
+          "metric": "Bundle size reduction",
+          "value": "-22%",
+          "period": "Q3 2025"
+        },
+        {
+          "metric": "Test coverage increase",
+          "value": "12% → 54%",
+          "period": "3 months"
+        }
+      ],
+      "tags": ["React", "TypeScript", "Vite", "REST API", "fintech"]
+    },
+    {
+      "organization": "Zalando SE",
+      "organizationUrl": "https://www.zalando.de",
+      "role": "Software Engineering Intern",
+      "startDate": "2024-06-01",
+      "endDate": "2024-09-30",
+      "location": { "city": "Berlin", "country": "DE", "remote": false },
+      "employmentType": "internship",
+      "highlights": [
+        "Developed an internal tooling page for the catalog team using React and GraphQL.",
+        "Participated in two sprints, attending daily stand-ups and retrospectives.",
+        "Fixed 14 bugs in a Node.js microservice handling product data enrichment."
+      ],
+      "tags": ["React", "GraphQL", "Node.js", "e-commerce"],
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Zalando SE",
+        "issuerType": "company",
+        "issuedAt": "2024-10-01"
+      }
+    },
+    {
+      "organization": "Fraunhofer FOKUS",
+      "organizationUrl": "https://www.fokus.fraunhofer.de",
+      "role": "Working Student – Web Development",
+      "startDate": "2023-09-01",
+      "endDate": "2024-05-31",
+      "location": { "city": "Berlin", "country": "DE", "remote": false },
+      "employmentType": "part-time",
+      "highlights": [
+        "Maintained a Django/React research portal used by consortium partners.",
+        "Integrated OAuth 2.0 single sign-on, replacing manual user management.",
+        "Wrote end-to-end tests with Playwright reducing manual QA effort per release by roughly four hours."
+      ],
+      "tags": ["React", "Django", "Python", "OAuth", "research"]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Technische Universität Berlin",
+      "institutionUrl": "https://www.tu.berlin",
+      "degree": "Bachelor of Science",
+      "field": "Computer Science",
+      "startDate": "2021-10-01",
+      "endDate": "2025-02-28",
+      "grade": "2.1 (German scale)",
+      "highlights": [
+        "Thesis: 'Optimizing React rendering performance in data-heavy dashboards'.",
+        "Teaching assistant for the introductory programming course (Java) in WS 2022/23."
+      ],
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Technische Universität Berlin",
+        "issuerType": "school",
+        "issuedAt": "2025-03-15"
+      }
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "TypeScript",
+      "level": "intermediate",
+      "category": "programming language",
+      "lastUsed": "2026-02-01",
+      "yearsOfExperience": 2
+    },
+    {
+      "name": "JavaScript",
+      "level": "advanced",
+      "category": "programming language",
+      "lastUsed": "2026-02-01",
+      "yearsOfExperience": 3
+    },
+    {
+      "name": "React",
+      "level": "intermediate",
+      "category": "framework",
+      "lastUsed": "2026-02-01",
+      "yearsOfExperience": 2
+    },
+    {
+      "name": "Node.js",
+      "level": "intermediate",
+      "category": "runtime",
+      "lastUsed": "2026-01-15",
+      "yearsOfExperience": 2
+    },
+    {
+      "name": "Python",
+      "level": "intermediate",
+      "category": "programming language",
+      "lastUsed": "2024-05-31",
+      "yearsOfExperience": 2
+    },
+    {
+      "name": "GraphQL",
+      "level": "beginner",
+      "category": "protocol",
+      "lastUsed": "2024-09-30",
+      "yearsOfExperience": 0.5
+    },
+    {
+      "name": "Vitest",
+      "level": "intermediate",
+      "category": "testing",
+      "lastUsed": "2026-02-01",
+      "yearsOfExperience": 1
+    },
+    {
+      "name": "Playwright",
+      "level": "beginner",
+      "category": "testing",
+      "lastUsed": "2024-05-31",
+      "yearsOfExperience": 0.5
+    },
+    {
+      "name": "Git",
+      "level": "advanced",
+      "category": "tool",
+      "lastUsed": "2026-02-01",
+      "yearsOfExperience": 4
+    },
+    {
+      "name": "Communication",
+      "level": "advanced",
+      "category": "soft skill"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "BudgetMate",
+      "description": "A personal finance PWA built with React and Supabase that lets users track expenses and set savings goals. Reached 400+ active users organically.",
+      "role": "Solo developer",
+      "startDate": "2024-11-01",
+      "current": true,
+      "technologies": ["React", "TypeScript", "Supabase", "Vite", "Tailwind CSS"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/lukasbauer-dev/budgetmate" },
+        { "label": "Live Demo", "url": "https://budgetmate.example.com" }
+      ]
+    }
+  ],
+
+  "credentials": [
+    {
+      "name": "Meta Front-End Developer Certificate",
+      "issuer": "Meta (Coursera)",
+      "issueDate": "2023-07-01",
+      "url": "https://www.coursera.org/account/accomplishments/lukasbauer123",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Coursera",
+        "issuerType": "platform",
+        "issuedAt": "2023-07-01",
+        "url": "https://www.coursera.org/account/accomplishments/lukasbauer123"
+      }
+    }
+  ],
+
+  "languages": [
+    { "code": "de", "name": "German", "level": "native" },
+    { "code": "en", "name": "English", "level": "C1" },
+    { "code": "pl", "name": "Polish", "level": "A2" }
+  ],
+
+  "preferences": {
+    "desiredRoles": ["Frontend Developer", "Full-Stack Developer", "Software Engineer"],
+    "industries": ["SaaS", "fintech", "developer tools", "open source"],
+    "locations": ["Berlin", "Hamburg", "Munich", "Remote"],
+    "workModes": ["remote", "hybrid"],
+    "salary": {
+      "min": 55000,
+      "max": 70000,
+      "currency": "EUR",
+      "period": "annual",
+      "negotiable": true
+    },
+    "workHours": ["full-time"],
+    "constraints": {
+      "noticePeriod": "4 weeks",
+      "availableFrom": "2026-04-01",
+      "travelWillingness": "occasional",
+      "notes": "Prefer a team of 5–50 people. No relocation to outside EU at this stage."
+    }
+  },
+
+  "evidence": [
+    {
+      "type": "test-result",
+      "title": "Codility Frontend Skills Assessment – Score 87/100",
+      "description": "Passed the Codility JavaScript & React intermediate-level assessment. Score places in the top 15% of candidates.",
+      "url": "https://codility.com/cert/view/lukasbauer2025",
+      "relatedSkills": ["JavaScript", "React"],
+      "issuer": "Codility",
+      "verification": {
+        "level": "test",
+        "issuerName": "Codility",
+        "issuerType": "platform",
+        "issuedAt": "2025-10-15",
+        "url": "https://codility.com/cert/view/lukasbauer2025"
+      }
+    },
+    {
+      "type": "code",
+      "title": "GitHub Profile – lukasbauer-dev",
+      "description": "Public GitHub activity including BudgetMate, open-source contributions to React Query, and personal experiments.",
+      "url": "https://github.com/lukasbauer-dev",
+      "relatedSkills": ["TypeScript", "React", "Node.js"]
+    }
+  ],
+
+  "verification": {
+    "createdBy": "user",
+    "createdAt": "2026-01-15T09:00:00Z",
+    "updatedBy": "user",
+    "integrity": "sha256:pending"
+  },
+
+  "visibility": {
+    "defaultVisibility": "recruiters",
+    "overrides": [
+      {
+        "path": "/identity/contact/phone",
+        "visibility": "private"
+      },
+      {
+        "path": "/preferences/salary",
+        "visibility": "recruiters"
+      }
+    ]
+  },
+
+  "custom": {}
+}

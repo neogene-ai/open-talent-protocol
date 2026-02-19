@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "schemaVersion": "0.1",
+    "language": "en",
+    "lastUpdated": "2026-02-10T14:30:00Z",
+    "source": "jobgrow"
+  },
+
+  "identity": {
+    "fullName": "Sofia Marchetti",
+    "preferredName": "Sofia",
+    "pronouns": "she/her",
+    "contact": {
+      "email": "sofia.marchetti@example.com",
+      "phone": "+39 333 9876543",
+      "location": {
+        "city": "Milan",
+        "region": "Lombardy",
+        "country": "IT",
+        "postalCode": "20121"
+      },
+      "timezone": "Europe/Rome"
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "url": "https://www.linkedin.com/in/sofia-marchetti-pm",
+        "username": "sofia-marchetti-pm"
+      },
+      {
+        "network": "personal",
+        "url": "https://sofiamarchetti.example.com"
+      }
+    ],
+    "workAuthorization": {
+      "description": "Italian and EU citizen. Authorized to work across the EU/EEA without restrictions.",
+      "authorizedCountries": ["IT", "DE", "FR", "NL", "ES", "SE", "FI", "IE"],
+      "requiresSponsorship": false
+    }
+  },
+
+  "summary": "Head of Product with 11 years of experience building and scaling B2B SaaS products across fintech and e-commerce. Track record of leading cross-functional teams of 15–40 people, owning full product lifecycle from discovery to post-launch, and driving measurable revenue growth. Dual-citizen (IT/DE), comfortable operating in English and Italian, and experienced with distributed remote teams across multiple time zones.",
+
+  "work": [
+    {
+      "organization": "Mondu GmbH",
+      "organizationUrl": "https://www.mondu.ai",
+      "role": "Head of Product",
+      "startDate": "2023-01-01",
+      "current": true,
+      "location": { "city": "Berlin", "country": "DE", "remote": true },
+      "employmentType": "full-time",
+      "highlights": [
+        "Owned the product strategy for a B2B Buy Now Pay Later platform serving 3,000+ merchants in DE, NL, FR.",
+        "Hired and managed a product team of five PMs and three UX researchers.",
+        "Led a zero-to-one initiative for a merchant self-onboarding flow, reducing onboarding time from 11 days to 2 days.",
+        "Introduced OKR-based product planning cadence adopted by the entire 80-person engineering org.",
+        "Partnered with Sales and CX to define and instrument 12 product KPIs using Amplitude and dbt."
+      ],
+      "impact": [
+        {
+          "metric": "Merchant onboarding time",
+          "value": "11 days → 2 days",
+          "period": "H1 2023"
+        },
+        {
+          "metric": "GMV growth",
+          "value": "+62%",
+          "period": "2023–2024"
+        },
+        {
+          "metric": "Product team headcount built",
+          "value": "0 → 8 (5 PMs + 3 UXR)",
+          "period": "2023–2025"
+        }
+      ],
+      "tags": ["B2B SaaS", "fintech", "BNPL", "OKRs", "product strategy", "hiring"],
+      "verification": {
+        "level": "platform",
+        "issuerName": "JobGrow",
+        "issuerType": "platform",
+        "issuedAt": "2026-01-20",
+        "url": "https://jobgrow.example.com/verify/sofia-marchetti-mondu"
+      }
+    },
+    {
+      "organization": "Scalapay SpA",
+      "organizationUrl": "https://www.scalapay.com",
+      "role": "Senior Product Manager – Checkout & Payments",
+      "startDate": "2020-09-01",
+      "endDate": "2022-12-31",
+      "location": { "city": "Milan", "country": "IT", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Owned the checkout integration SDK used by 8,000+ merchants across Italy, France, and Spain.",
+        "Reduced checkout drop-off rate by 18% through iterative A/B testing of payment flow UX.",
+        "Led compliance product work for PSD2 Strong Customer Authentication rollout.",
+        "Managed a squad of 8 engineers and 2 designers using dual-track agile."
+      ],
+      "impact": [
+        {
+          "metric": "Checkout drop-off reduction",
+          "value": "-18%",
+          "period": "2021"
+        },
+        {
+          "metric": "Merchants on SDK",
+          "value": "8,000+",
+          "period": "end of 2022"
+        }
+      ],
+      "tags": ["payments", "checkout", "PSD2", "A/B testing", "dual-track agile", "fintech"]
+    },
+    {
+      "organization": "Zalando SE",
+      "organizationUrl": "https://www.zalando.de",
+      "role": "Product Manager – Seller Platform",
+      "startDate": "2018-02-01",
+      "endDate": "2020-08-31",
+      "location": { "city": "Berlin", "country": "DE", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Managed the Zalando Partner Program seller dashboard, used by 3,500+ fashion brands.",
+        "Shipped a self-service returns portal that reduced seller support tickets by 30%.",
+        "Collaborated with data science to build a demand forecasting recommendation feature."
+      ],
+      "impact": [
+        {
+          "metric": "Seller support ticket reduction",
+          "value": "-30%",
+          "period": "H2 2019"
+        }
+      ],
+      "tags": ["marketplace", "e-commerce", "seller tooling", "data science"]
+    },
+    {
+      "organization": "Yoox Net-a-Porter Group",
+      "organizationUrl": "https://www.ynap.com",
+      "role": "Associate Product Manager",
+      "startDate": "2016-03-01",
+      "endDate": "2018-01-31",
+      "location": { "city": "Milan", "country": "IT", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Supported the senior PM team on search and discovery features for Net-a-Porter.",
+        "Ran user research interviews and synthesized findings into actionable product requirements.",
+        "Coordinated localization efforts for the Japanese market launch."
+      ],
+      "tags": ["luxury e-commerce", "search", "localization", "user research"]
+    },
+    {
+      "organization": "McKinsey & Company",
+      "role": "Business Analyst",
+      "startDate": "2014-09-01",
+      "endDate": "2016-02-28",
+      "location": { "city": "Milan", "country": "IT", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Delivered digital transformation engagements for retail and financial services clients.",
+        "Built financial models and market sizing analyses for two M&A due diligence projects."
+      ],
+      "tags": ["consulting", "digital transformation", "financial modeling"]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Bocconi University",
+      "institutionUrl": "https://www.unibocconi.eu",
+      "degree": "Master of Science",
+      "field": "Management of Innovation and Technology",
+      "startDate": "2012-09-01",
+      "endDate": "2014-07-31",
+      "grade": "110/110 cum laude",
+      "highlights": [
+        "Graduated with highest honors.",
+        "Exchange semester at Erasmus University Rotterdam."
+      ],
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Bocconi University",
+        "issuerType": "school",
+        "issuedAt": "2014-07-31"
+      }
+    },
+    {
+      "institution": "Politecnico di Milano",
+      "institutionUrl": "https://www.polimi.it",
+      "degree": "Bachelor of Science",
+      "field": "Management Engineering",
+      "startDate": "2009-09-01",
+      "endDate": "2012-07-31",
+      "grade": "108/110"
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Product Strategy",
+      "level": "expert",
+      "category": "product management",
+      "yearsOfExperience": 11
+    },
+    {
+      "name": "OKR Frameworks",
+      "level": "expert",
+      "category": "product management",
+      "yearsOfExperience": 5
+    },
+    {
+      "name": "Dual-Track Agile",
+      "level": "advanced",
+      "category": "methodology",
+      "yearsOfExperience": 6
+    },
+    {
+      "name": "User Research",
+      "level": "advanced",
+      "category": "product management",
+      "yearsOfExperience": 9
+    },
+    {
+      "name": "Data Analysis",
+      "level": "advanced",
+      "category": "analytical",
+      "yearsOfExperience": 8
+    },
+    {
+      "name": "SQL",
+      "level": "intermediate",
+      "category": "programming language",
+      "lastUsed": "2026-01-01",
+      "yearsOfExperience": 5
+    },
+    {
+      "name": "Amplitude",
+      "level": "advanced",
+      "category": "tool",
+      "yearsOfExperience": 4
+    },
+    {
+      "name": "Figma",
+      "level": "intermediate",
+      "category": "tool",
+      "yearsOfExperience": 5
+    },
+    {
+      "name": "Stakeholder Management",
+      "level": "expert",
+      "category": "soft skill",
+      "yearsOfExperience": 11
+    },
+    {
+      "name": "Hiring & Team Building",
+      "level": "expert",
+      "category": "leadership",
+      "yearsOfExperience": 4
+    },
+    {
+      "name": "Payments & PSD2",
+      "level": "advanced",
+      "category": "domain knowledge",
+      "yearsOfExperience": 5
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Product Compass Newsletter",
+      "description": "A bi-weekly newsletter covering product management frameworks, case studies from EU fintechs, and career advice for PMs. 3,200+ subscribers as of early 2026.",
+      "role": "Author and editor",
+      "startDate": "2022-01-01",
+      "current": true,
+      "links": [
+        { "label": "Substack", "url": "https://productcompass.example.substack.com" }
+      ]
+    }
+  ],
+
+  "credentials": [
+    {
+      "name": "Pragmatic Marketing Certified – Level PMC-IV",
+      "issuer": "Pragmatic Institute",
+      "issueDate": "2021-03-01",
+      "credentialId": "PMC-IV-2021-00842",
+      "url": "https://www.pragmaticinstitute.com/verify/PMC-IV-2021-00842",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Pragmatic Institute",
+        "issuerType": "cert-provider",
+        "issuedAt": "2021-03-01",
+        "url": "https://www.pragmaticinstitute.com/verify/PMC-IV-2021-00842"
+      }
+    },
+    {
+      "name": "Professional Scrum Product Owner™ (PSPO I)",
+      "issuer": "Scrum.org",
+      "issueDate": "2018-11-15",
+      "url": "https://www.scrum.org/certificates/sofia-marchetti"
+    }
+  ],
+
+  "languages": [
+    { "code": "it", "name": "Italian", "level": "native" },
+    { "code": "en", "name": "English", "level": "C2" },
+    { "code": "de", "name": "German", "level": "B2" },
+    { "code": "fr", "name": "French", "level": "B1" }
+  ],
+
+  "preferences": {
+    "desiredRoles": ["Head of Product", "VP of Product", "CPO", "Director of Product"],
+    "industries": ["fintech", "B2B SaaS", "marketplace", "climate tech"],
+    "locations": ["Berlin", "Amsterdam", "London", "Paris", "Remote"],
+    "workModes": ["remote", "hybrid"],
+    "salary": {
+      "min": 140000,
+      "max": 200000,
+      "currency": "EUR",
+      "period": "annual",
+      "negotiable": true
+    },
+    "workHours": ["full-time"],
+    "constraints": {
+      "noticePeriod": "3 months",
+      "availableFrom": "2026-05-01",
+      "travelWillingness": "occasional",
+      "notes": "Equity is important. Prefer companies with Series B or later funding, or profitable SMEs. Open to fractional CPO engagements alongside a primary role."
+    }
+  },
+
+  "evidence": [
+    {
+      "type": "article",
+      "title": "How we cut onboarding from 11 days to 2 (and what we got wrong first)",
+      "description": "A case study published on Product Compass describing the zero-to-one merchant onboarding redesign at Mondu.",
+      "url": "https://productcompass.example.substack.com/p/onboarding-case-study",
+      "relatedSkills": ["Product Strategy", "User Research", "Stakeholder Management"]
+    },
+    {
+      "type": "talk",
+      "title": "OKRs Without the Theater – ProductCon Berlin 2024",
+      "description": "Keynote talk on implementing outcome-focused OKR cycles in product orgs of 50–200 people.",
+      "url": "https://productcon.example.com/berlin2024/sofia-marchetti",
+      "relatedSkills": ["OKR Frameworks", "Product Strategy"]
+    }
+  ],
+
+  "verification": {
+    "createdBy": "platform",
+    "createdAt": "2026-01-10T12:00:00Z",
+    "updatedBy": "agent:jobgrow-v2",
+    "integrity": "sha256:pending"
+  },
+
+  "visibility": {
+    "defaultVisibility": "recruiters",
+    "overrides": [
+      {
+        "path": "/identity/contact/phone",
+        "visibility": "private"
+      },
+      {
+        "path": "/preferences/salary",
+        "visibility": "recruiters"
+      },
+      {
+        "path": "/preferences/constraints/notes",
+        "visibility": "recruiters"
+      }
+    ]
+  },
+
+  "custom": {
+    "jobgrow:talentScore": 94,
+    "jobgrow:lastActivityAt": "2026-02-10T14:30:00Z"
+  }
+}

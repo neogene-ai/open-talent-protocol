@@ -1,0 +1,309 @@
+{
+  "meta": {
+    "schemaVersion": "0.1",
+    "language": "en",
+    "lastUpdated": "2026-02-05T09:15:00Z",
+    "source": "user"
+  },
+
+  "identity": {
+    "fullName": "Marta Kowalczyk",
+    "preferredName": "Marta",
+    "pronouns": "she/her",
+    "contact": {
+      "email": "marta.kowalczyk@example.com",
+      "phone": "+48 601 234 567",
+      "location": {
+        "city": "Warsaw",
+        "region": "Masovian Voivodeship",
+        "country": "PL",
+        "postalCode": "00-001"
+      },
+      "timezone": "Europe/Warsaw"
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "url": "https://www.linkedin.com/in/marta-kowalczyk-rn"
+      }
+    ],
+    "workAuthorization": {
+      "description": "Polish and EU citizen. Eligible to work in any EU/EEA country. Has worked in Germany (2019–2021) without issues. May need credential recognition process when moving to a new EU member state.",
+      "authorizedCountries": ["PL", "DE", "AT", "NL", "SE", "NO", "IE", "FR"],
+      "requiresSponsorship": false
+    }
+  },
+
+  "summary": "Registered nurse with nine years of clinical experience across internal medicine, oncology, and emergency settings. Bilingual (Polish/German). Strong background in patient advocacy, multi-disciplinary team coordination, and shift leadership. Currently based in Warsaw; open to relocation within the EU with appropriate relocation support. Seeking a stable position with regular shift patterns and professional development opportunities in oncology or palliative care.",
+
+  "work": [
+    {
+      "organization": "Mazovian Regional Hospital",
+      "role": "Senior Registered Nurse – Oncology Ward",
+      "startDate": "2022-01-01",
+      "current": true,
+      "location": { "city": "Warsaw", "country": "PL", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Provide direct nursing care for 10–14 oncology patients per shift, including chemotherapy administration and symptom management.",
+        "Serve as shift leader two nights per week, coordinating a team of four nurses and one care assistant.",
+        "Participate in multidisciplinary tumor board meetings and maintain patient care documentation in the hospital's EMR system.",
+        "Mentored three newly qualified nurses through their first year on the ward.",
+        "Contributed to a ward-level protocol update for central venous catheter care, reducing CLABSI rate by 40%."
+      ],
+      "impact": [
+        {
+          "metric": "CLABSI rate reduction",
+          "value": "-40%",
+          "period": "12 months after protocol update (2023)"
+        }
+      ],
+      "tags": ["oncology", "chemotherapy", "shift leadership", "patient advocacy", "EMR", "CLABSI"]
+    },
+    {
+      "organization": "Charité – Universitätsmedizin Berlin",
+      "organizationUrl": "https://www.charite.de",
+      "role": "Registered Nurse – Internal Medicine",
+      "startDate": "2019-04-01",
+      "endDate": "2021-12-31",
+      "location": { "city": "Berlin", "country": "DE", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Cared for patients in a 28-bed internal medicine ward with high acuity, including post-operative care and chronic disease management.",
+        "Communicated daily with patients and families in German and English.",
+        "Assisted with bedside procedures including central line insertion, lumbar punctures, and paracentesis.",
+        "Completed mandatory German nursing credential recognition (Berufsanerkennung) process on arrival."
+      ],
+      "tags": ["internal medicine", "post-operative care", "Germany", "chronic disease", "berufsanerkennung"],
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Charité – Universitätsmedizin Berlin",
+        "issuerType": "company",
+        "issuedAt": "2022-01-10"
+      }
+    },
+    {
+      "organization": "Central Clinical Hospital, Warsaw",
+      "role": "Registered Nurse – Emergency Department",
+      "startDate": "2016-09-01",
+      "endDate": "2019-03-31",
+      "location": { "city": "Warsaw", "country": "PL", "remote": false },
+      "employmentType": "full-time",
+      "highlights": [
+        "Triaged and managed high volumes of patients in a busy urban emergency department (80–120 patients per 12-hour shift).",
+        "Performed IV line placement, ECG recording, wound care, and medication administration under time pressure.",
+        "Participated in trauma team activations alongside emergency physicians and surgeons."
+      ],
+      "tags": ["emergency nursing", "triage", "trauma", "acute care"]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Medical University of Warsaw",
+      "institutionUrl": "https://www.wum.edu.pl",
+      "degree": "Bachelor of Science in Nursing",
+      "field": "Nursing",
+      "startDate": "2012-10-01",
+      "endDate": "2016-06-30",
+      "grade": "very good (4.8/5.0, Polish scale)",
+      "highlights": [
+        "Clinical placements in internal medicine, paediatrics, surgical, and community settings.",
+        "Bachelor's thesis: 'Psychosocial burden and coping strategies in oncology nurses'."
+      ],
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Medical University of Warsaw",
+        "issuerType": "school",
+        "issuedAt": "2016-07-15"
+      }
+    }
+  ],
+
+  "skills": [
+    {
+      "name": "Chemotherapy Administration",
+      "level": "advanced",
+      "category": "clinical",
+      "yearsOfExperience": 4
+    },
+    {
+      "name": "Venipuncture and IV Line Insertion",
+      "level": "expert",
+      "category": "clinical",
+      "yearsOfExperience": 9
+    },
+    {
+      "name": "Patient Triage",
+      "level": "advanced",
+      "category": "clinical",
+      "yearsOfExperience": 3
+    },
+    {
+      "name": "Central Venous Catheter Care",
+      "level": "advanced",
+      "category": "clinical",
+      "yearsOfExperience": 5
+    },
+    {
+      "name": "Electronic Medical Records (EMR)",
+      "level": "advanced",
+      "category": "tool",
+      "yearsOfExperience": 6
+    },
+    {
+      "name": "Palliative Care",
+      "level": "intermediate",
+      "category": "clinical",
+      "yearsOfExperience": 3
+    },
+    {
+      "name": "Shift Leadership",
+      "level": "intermediate",
+      "category": "leadership",
+      "yearsOfExperience": 2
+    },
+    {
+      "name": "Patient & Family Education",
+      "level": "advanced",
+      "category": "soft skill",
+      "yearsOfExperience": 9
+    },
+    {
+      "name": "Multidisciplinary Team Collaboration",
+      "level": "expert",
+      "category": "soft skill",
+      "yearsOfExperience": 9
+    }
+  ],
+
+  "projects": [],
+
+  "credentials": [
+    {
+      "name": "Registered Nurse License – Poland",
+      "issuer": "Naczelna Izba Pielęgniarek i Położnych (NIPiP)",
+      "issueDate": "2016-09-01",
+      "credentialId": "PL-RN-2016-084521",
+      "url": "https://nipip.pl/rejestr/PL-RN-2016-084521",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "Naczelna Izba Pielęgniarek i Położnych",
+        "issuerType": "other",
+        "issuedAt": "2016-09-01",
+        "url": "https://nipip.pl/rejestr/PL-RN-2016-084521"
+      }
+    },
+    {
+      "name": "Berufsanerkennung – Registered Nurse (Germany)",
+      "issuer": "Landesamt für Gesundheit und Soziales Berlin (LaGeSo)",
+      "issueDate": "2019-06-01",
+      "credentialId": "BE-RN-2019-00321",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "LaGeSo Berlin",
+        "issuerType": "other",
+        "issuedAt": "2019-06-01"
+      }
+    },
+    {
+      "name": "Oncology Nursing Certificate",
+      "issuer": "Centrum Kształcenia Podyplomowego Pielęgniarek i Położnych (CKPPiP)",
+      "issueDate": "2023-04-15",
+      "credentialId": "CKP-ONC-2023-1104",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "CKPPiP",
+        "issuerType": "cert-provider",
+        "issuedAt": "2023-04-15"
+      }
+    },
+    {
+      "name": "Advanced Cardiovascular Life Support (ACLS)",
+      "issuer": "European Resuscitation Council (ERC)",
+      "issueDate": "2024-09-01",
+      "expiryDate": "2026-09-01",
+      "url": "https://erc.edu/certificates/erc-acls-marta-kowalczyk",
+      "verification": {
+        "level": "issuer",
+        "issuerName": "European Resuscitation Council",
+        "issuerType": "cert-provider",
+        "issuedAt": "2024-09-01",
+        "url": "https://erc.edu/certificates/erc-acls-marta-kowalczyk"
+      }
+    }
+  ],
+
+  "languages": [
+    { "code": "pl", "name": "Polish", "level": "native" },
+    { "code": "de", "name": "German", "level": "C1" },
+    { "code": "en", "name": "English", "level": "B2" }
+  ],
+
+  "preferences": {
+    "desiredRoles": [
+      "Registered Nurse – Oncology",
+      "Registered Nurse – Palliative Care",
+      "Senior Nurse / Shift Leader"
+    ],
+    "industries": ["healthcare", "hospital", "hospice / palliative care"],
+    "locations": ["Warsaw", "Berlin", "Vienna", "Amsterdam", "Stockholm"],
+    "workModes": ["onsite", "hybrid"],
+    "salary": {
+      "min": 48000,
+      "max": 65000,
+      "currency": "EUR",
+      "period": "annual",
+      "negotiable": true
+    },
+    "workHours": ["full-time", "part-time"],
+    "constraints": {
+      "noticePeriod": "6 weeks",
+      "availableFrom": "2026-04-15",
+      "travelWillingness": "none",
+      "notes": "Shifts must be regular and scheduled at least four weeks in advance. No more than two consecutive night shifts. Relocation assistance is required for positions outside Warsaw. On-call rotations are not acceptable. Requires written confirmation that EU nursing license recognition will be supported by the employer."
+    }
+  },
+
+  "evidence": [
+    {
+      "type": "other",
+      "title": "Protocol contribution: Central Venous Catheter Care Update – Mazovian Regional Hospital",
+      "description": "Co-authored an updated ward-level CVC care protocol that contributed to a 40% reduction in central-line associated bloodstream infections (CLABSI) over a 12-month period.",
+      "url": "https://example.com/hospital-internal/cvc-protocol-2023",
+      "relatedSkills": ["Central Venous Catheter Care"],
+      "issuer": "Mazovian Regional Hospital"
+    }
+  ],
+
+  "verification": {
+    "createdBy": "user",
+    "createdAt": "2026-02-01T08:00:00Z",
+    "updatedBy": "user",
+    "integrity": "sha256:pending"
+  },
+
+  "visibility": {
+    "defaultVisibility": "recruiters",
+    "overrides": [
+      {
+        "path": "/identity/contact/phone",
+        "visibility": "private"
+      },
+      {
+        "path": "/identity/contact/email",
+        "visibility": "private"
+      },
+      {
+        "path": "/preferences/salary",
+        "visibility": "recruiters"
+      },
+      {
+        "path": "/preferences/constraints/notes",
+        "visibility": "recruiters"
+      }
+    ]
+  },
+
+  "custom": {}
+}
