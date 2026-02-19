@@ -96,6 +96,14 @@
         "source": {
           "type": "string",
           "description": "System or actor that last wrote this document (e.g. 'user', 'jobgrow', 'import:jsonresume', 'agent')."
+        },
+        "dataController": {
+          "type": "string",
+          "description": "The legal data controller responsible for this document — the entity that determines the purposes and means of processing the personal data it contains. May be an individual (the subject themselves), an employer, or a platform. Can be a name, a URI, or a platform-specific identifier. Relevant for GDPR Article 4(7) compliance and similar data protection frameworks."
+        },
+        "subjectId": {
+          "type": "string",
+          "description": "A stable identifier for the human subject of this document. This is NOT necessarily an email address; it may be a platform-assigned ID, a DID (Decentralized Identifier), or any other persistent, portable identifier the subject controls. Intended to enable de-duplication, agent ownership, and future verifiable credential binding without prescribing an identity regime."
         }
       },
       "additionalProperties": false

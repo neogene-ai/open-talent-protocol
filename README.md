@@ -159,9 +159,35 @@ Breaking changes before 1.0 will increment the minor version (`0.2`, `0.3`, …)
 
 ---
 
+## Governance & Neutrality
+
+### Vendor-neutral by design
+
+The Open Talent Protocol is an open standard, not a product. [JobGrow](https://jobgrow.example.com) and neogene.ai are its initial sponsors and maintainers, but the specification is intended for broad ecosystem adoption. No single company has veto power over the spec, and the MIT license ensures that any organization can implement, fork, or build on OTP without asking permission.
+
+Governance details — how decisions are made, how maintainers are added, and how conflicts are resolved — are documented in [GOVERNANCE.md](GOVERNANCE.md).
+
+### Long-term direction
+
+If the project gains adoption across multiple organizations, the intention is to move it under a neutral foundation or working group — for example, within the Linux Foundation AI & Data ecosystem, a future Agentic AI working group, or a similar open governance body. This is a direction, not a promise, but it is the direction we are building toward.
+
+The spec will always be MIT-licensed. There will never be a "commercial version" of the core schema.
+
+### Core values
+
+**Owners, not renters.** Individuals and organizations should own their profile data and their agents. The Open Talent Protocol exists to prevent lock-in: a conforming document can move between platforms without data loss and without negotiating with a vendor.
+
+**Privacy and fairness.** The `visibility` section is first-class, not an afterthought. Candidates decide what to share, with whom, and when. Agents and platforms that consume OTP documents are expected to respect these controls.
+
+**Transparency.** The `verification` and `meta` sections make the provenance of data explicit: who wrote it, when, and how it was verified. In an agentic world where software is making decisions about people's careers, opacity is a bug.
+
+**Interoperability.** OTP maps to JSON Resume, HR-XML, and schema.org. It should be straightforward to bring data in from existing systems and to export it back out. Walled gardens are anti-features.
+
+---
+
 ## Contributing
 
-Issues and pull requests are welcome. Please open an issue before submitting a large change.
+Issues and pull requests are welcome. Please open an issue before submitting a large change. See [GOVERNANCE.md](GOVERNANCE.md) for how decisions are made and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
 
 ---
 

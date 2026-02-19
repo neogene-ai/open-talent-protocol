@@ -1,0 +1,21 @@
+{
+  "name": "@opentalentprotocol/agent-examples",
+  "version": "0.1.0",
+  "description": "Agent integration stubs for the Open Talent Protocol",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/example-agent-loop.js"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
