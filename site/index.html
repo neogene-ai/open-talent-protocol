@@ -74,6 +74,7 @@
         <li><a href="#examples">Examples</a></li>
         <li><a href="#tools">Tools &amp; validator</a></li>
         <li><a href="#migration">Migration guides</a></li>
+        <li><a href="#ecosystem">Ecosystem</a></li>
         <li><a href="#governance">Governance</a></li>
       </ul>
     </div>
@@ -119,6 +120,9 @@
         Open Talent Protocol (OTP) is that format. It encodes the things that matter
         to agents: structured preferences for matching, verification and provenance for trust,
         and privacy controls so candidates decide what to share and with whom.
+        OTP is the talent half of a bilateral ecosystem — its companion standard,
+        the <a href="https://openjobprotocol.org" target="_blank" rel="noopener">Open Job Protocol</a>,
+        handles the employer and job-posting side.
       </p>
 
       <table class="prop-table" style="margin-top:1.25rem">
@@ -801,6 +805,36 @@ node dist/index.js path/to/profile.json
     </section>
 
     <!-- ======================================================
+         Ecosystem
+         ====================================================== -->
+    <section class="spec-section" id="ecosystem">
+      <h2>Ecosystem</h2>
+      <hr class="section-divider" />
+      <p>
+        OTP defines the talent side of agentic marketplaces. It is designed to work alongside
+        complementary open standards that together cover both sides of the hiring equation.
+      </p>
+
+      <div class="callout">
+        <strong>Open Job Protocol (OJP)</strong> is the employer-side counterpart to OTP — a
+        machine-first, vendor-neutral JSON standard for structuring job postings.
+        OJP captures structured requirements (must-have vs nice-to-have skills), compensation
+        transparency, and hiring-process metadata so employer agents can publish opportunities
+        that talent agents can parse without scraping or guesswork.
+        <br /><br />
+        <a href="https://openjobprotocol.org" target="_blank" rel="noopener">openjobprotocol.org</a> ·
+        <a href="https://github.com/neogene-ai/open-job-protocol" target="_blank" rel="noopener">GitHub repository</a>
+      </div>
+
+      <p>
+        Together, OTP + OJP enable fully structured, agent-driven bilateral matching.
+        Candidates express preferences and constraints in their OTP profile; employers express
+        requirements and offer details in an OJP posting. Agents on both sides can evaluate
+        fit and negotiate programmatically — no unstructured job-board listings or PDF resumes required.
+      </p>
+    </section>
+
+    <!-- ======================================================
          Governance
          ====================================================== -->
     <section class="spec-section" id="governance">
@@ -810,6 +844,7 @@ node dist/index.js path/to/profile.json
         Open Talent Protocol is vendor-neutral. <a href="https://jobgrow.ai" target="_blank" rel="noopener">JobGrow</a>
         and <a href="https://app.neogene.ai/" target="_blank" rel="noopener">neogene.ai</a> are its initial sponsors, but the spec is designed for broad ecosystem adoption.
         No single company has veto power over the schema.
+        The same community is developing the <a href="https://openjobprotocol.org" target="_blank" rel="noopener">Open Job Protocol</a> as a companion standard for the employer side.
       </p>
       <p>
         The project is governed by a maintainer council using lazy consensus. See
