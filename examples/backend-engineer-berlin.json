@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "version": "0.1",
+    "job_id": "acme-corp-sbe-2026-001",
+    "status": "ACTIVE",
+    "created_at": "2026-02-01T10:00:00Z",
+    "updated_at": "2026-02-15T09:30:00Z",
+    "valid_through": "2026-04-30",
+    "source": "acme-corp-ats",
+    "source_url": "https://careers.acme-corp.example/jobs/sbe-2026-001",
+    "locale": "en"
+  },
+  "role": {
+    "title": "Senior Backend Engineer",
+    "description": "We are looking for an experienced Senior Backend Engineer to join our platform team in Berlin. You will design and implement high-throughput microservices, own the API gateway, and mentor junior engineers.",
+    "employment_type": "full_time",
+    "role_summary": "Own and evolve our core payment and data processing services, ensuring 99.9% uptime and sub-100ms p99 latency.",
+    "function": "Engineering",
+    "seniority": "senior",
+    "total_openings": 2,
+    "responsibilities": [
+      "Design, implement, and maintain high-throughput microservices in Go and Python",
+      "Own the API gateway layer (Kong/Envoy) and its observability stack",
+      "Collaborate with product and ML teams to deliver data pipelines",
+      "Review code, define coding standards, and mentor junior engineers",
+      "Drive incident response and post-mortems for platform incidents"
+    ],
+    "work_hours": "40h/week, flexible core hours 10:00–16:00 CET",
+    "job_start_date": "2026-05-01",
+    "immediate_start": false
+  },
+  "organization": {
+    "name": "Acme Corp",
+    "url": "https://acme-corp.example",
+    "logo_url": "https://acme-corp.example/logo.png",
+    "industry": "B2B SaaS",
+    "size": "scale_up",
+    "department": "Platform Engineering",
+    "founded": 2018,
+    "headquarters": "Berlin, DE"
+  },
+  "requirements": {
+    "must_have": {
+      "skills": [
+        { "name": "Go", "min_years": 3 },
+        { "name": "PostgreSQL", "min_years": 3 },
+        { "name": "Kubernetes", "min_years": 2 },
+        { "name": "REST API Design", "min_years": 4 },
+        { "name": "Docker", "min_years": 3 }
+      ],
+      "experience_years": { "min": 5 },
+      "languages": [
+        { "code": "en", "level": "B2" }
+      ],
+      "legal": {
+        "work_authorization": "Must be authorized to work in the EU. Visa sponsorship available for exceptional candidates."
+      }
+    },
+    "nice_to_have": {
+      "skills": [
+        { "name": "Python", "min_years": 2 },
+        { "name": "Apache Kafka", "min_years": 1 },
+        { "name": "Terraform", "min_years": 1 },
+        { "name": "gRPC" },
+        { "name": "Redis" }
+      ],
+      "certifications": ["CKA (Certified Kubernetes Administrator)"],
+      "experience_in_place_of_education": true,
+      "preferred_qualifications": [
+        "Experience in fintech or payment processing",
+        "Open source contributions to backend infrastructure projects",
+        "Prior experience leading a team of 3+ engineers"
+      ]
+    }
+  },
+  "offering": {
+    "compensation": {
+      "salary": {
+        "min": 90000,
+        "max": 120000,
+        "currency": "EUR",
+        "period": "annual"
+      },
+      "additional_compensation": [
+        "Annual performance bonus up to 15%",
+        "€3,000 annual learning & development budget",
+        "VSOP equity participation"
+      ],
+      "transparency": "public"
+    },
+    "location": {
+      "arrangement": "hybrid",
+      "primary_location": "Berlin, DE",
+      "alternate_locations": ["Hamburg, DE"],
+      "relocation_support": true,
+      "visa_sponsorship": true
+    },
+    "benefits": {
+      "benefits": [
+        { "category": "health", "description": "Company-sponsored health insurance (Techniker Krankenkasse top-up)" },
+        { "category": "retirement", "description": "Company pension scheme with 4% employer contribution" },
+        { "category": "development", "description": "€3,000/year L&D budget + conference attendance" },
+        { "category": "flexibility", "description": "30 days vacation, flexible work hours, remote Fridays" },
+        { "category": "financial", "description": "€50/month public transport subsidy (Deutschlandticket)" },
+        { "category": "other", "description": "Monthly team offsites, free lunch on Wednesdays" }
+      ]
+    },
+    "growth": {
+      "career_path": "Senior → Staff → Principal Engineer or Engineering Manager track",
+      "mentorship": "Paired with Principal Engineer for the first 3 months",
+      "promotion_cadence": "Annual review cycle with mid-year check-in"
+    }
+  },
+  "team": {
+    "name": "Platform Engineering",
+    "size": 8,
+    "reports_to": "VP of Engineering",
+    "tech_stack": ["Go", "Python", "PostgreSQL", "Redis", "Kafka", "Kubernetes", "Terraform", "Datadog"],
+    "methodology": "Shape Up (6-week cycles with 2-week cooldowns)",
+    "description": "A team of 8 engineers responsible for the core platform, API infrastructure, and data pipelines. We value pragmatism, documentation, and blameless post-mortems."
+  },
+  "process": {
+    "stages": [
+      { "name": "Recruiter Screen", "duration_minutes": 30, "type": "screening" },
+      { "name": "Take-Home System Design", "duration_minutes": 120, "type": "take_home" },
+      { "name": "Technical Interview (live coding + system design)", "duration_minutes": 90, "type": "technical" },
+      { "name": "Team & Culture Fit", "duration_minutes": 60, "type": "behavioral" }
+    ],
+    "total_duration_days": 21,
+    "decision_timeline": "Offer within 3 business days of final interview",
+    "application_url": "https://careers.acme-corp.example/apply/sbe-2026-001",
+    "direct_apply": true,
+    "accepts_otp_profile": true,
+    "ai_screening": false
+  },
+  "culture": {
+    "values": ["ownership", "transparency", "craft", "customer obsession"],
+    "work_style": ["async-first documentation", "weekly all-hands", "no-meeting Thursdays"],
+    "special_commitments": ["Climate-neutral by 2030", "50% underrepresented groups in hiring pipeline"],
+    "eeo_statement": "Acme Corp is an equal opportunity employer.",
+    "employer_overview": "Acme Corp builds the infrastructure layer for European SME payments. Series B, 200 employees, growing 3× YoY."
+  },
+  "visibility": {
+    "salary": "public",
+    "team_details": true,
+    "process_stages": true,
+    "hiring_manager": false
+  }
+}
