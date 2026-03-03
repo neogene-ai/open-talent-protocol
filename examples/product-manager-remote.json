@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "version": "0.1",
+    "job_id": "nexus-pm-2026-003",
+    "status": "ACTIVE",
+    "created_at": "2026-01-20T08:00:00Z",
+    "updated_at": "2026-02-28T14:15:00Z",
+    "valid_through": "2026-05-31",
+    "source": "nexus-workable",
+    "source_url": "https://jobs.nexus.example/pm-2026-003",
+    "locale": "en"
+  },
+  "role": {
+    "title": "Product Manager – Developer Platform",
+    "description": "Nexus is hiring a Product Manager to own the roadmap for our developer platform, used by 20,000+ teams worldwide. You will collaborate with engineering, design, and GTM to ship features that delight developers.",
+    "employment_type": "full_time",
+    "role_summary": "Drive the vision and roadmap for the Nexus developer platform, balancing short-term wins with long-term architectural bets.",
+    "function": "Product",
+    "seniority": "mid",
+    "total_openings": 1,
+    "responsibilities": [
+      "Define and own the 12-month roadmap for the Nexus developer platform",
+      "Conduct continuous discovery with customers (interviews, surveys, data analysis)",
+      "Write clear, concise PRDs and acceptance criteria in partnership with engineering",
+      "Define success metrics and run A/B tests for major releases",
+      "Present roadmap to executive team quarterly"
+    ],
+    "work_hours": "Full-time, flexible — core overlap hours 13:00–17:00 UTC",
+    "immediate_start": false
+  },
+  "organization": {
+    "name": "Nexus Technologies",
+    "url": "https://nexus.example",
+    "logo_url": "https://nexus.example/assets/logo.svg",
+    "industry": "Developer Tools / Infrastructure",
+    "size": "scale_up",
+    "department": "Product",
+    "founded": 2020,
+    "headquarters": "Amsterdam, NL (fully distributed team)"
+  },
+  "requirements": {
+    "must_have": {
+      "skills": [
+        { "name": "Product Roadmapping", "min_years": 3 },
+        { "name": "User Research", "min_years": 2 },
+        { "name": "Data Analysis", "min_years": 2 },
+        { "name": "Agile / Scrum", "min_years": 3 }
+      ],
+      "experience_years": { "min": 3 },
+      "languages": [
+        { "code": "en", "level": "C1" }
+      ]
+    },
+    "nice_to_have": {
+      "skills": [
+        { "name": "SQL", "min_years": 1 },
+        { "name": "Figma" },
+        { "name": "API Design" },
+        { "name": "Developer Experience (DX)" }
+      ],
+      "experience_in_place_of_education": true,
+      "preferred_qualifications": [
+        "Prior experience as a software engineer or developer advocate",
+        "Experience with PLG (product-led growth) motions",
+        "Familiarity with Kubernetes, CI/CD pipelines, or infrastructure tooling"
+      ]
+    }
+  },
+  "offering": {
+    "compensation": {
+      "salary": {
+        "min": 75000,
+        "max": 100000,
+        "currency": "EUR",
+        "period": "annual"
+      },
+      "additional_compensation": [
+        "Annual performance bonus up to 10%",
+        "€2,000 annual home office / co-working budget",
+        "Equity options (0.05–0.15% depending on experience)"
+      ],
+      "transparency": "public"
+    },
+    "location": {
+      "arrangement": "remote",
+      "remote_regions": ["Europe", "UTC-2 to UTC+3"],
+      "relocation_support": false,
+      "visa_sponsorship": false
+    },
+    "benefits": {
+      "benefits": [
+        { "category": "health", "description": "€150/month health & wellbeing allowance (Gympass or insurance top-up)" },
+        { "category": "development", "description": "€2,000/year L&D budget + access to all major product conferences" },
+        { "category": "flexibility", "description": "25 days PTO + local public holidays, async-first culture" },
+        { "category": "family", "description": "16 weeks fully paid parental leave (primary and secondary)" },
+        { "category": "financial", "description": "€2,000 home office setup allowance on day one" }
+      ]
+    },
+    "growth": {
+      "career_path": "PM → Senior PM → Principal PM or Group PM",
+      "mentorship": "Weekly 1:1 with Head of Product + PM guild community of practice",
+      "promotion_cadence": "Bi-annual review cycle"
+    }
+  },
+  "team": {
+    "name": "Developer Platform",
+    "size": 12,
+    "reports_to": "Head of Product",
+    "tech_stack": ["React", "TypeScript", "Go", "PostgreSQL", "Kafka", "Kubernetes", "Amplitude", "Figma"],
+    "methodology": "Dual-track agile with weekly discovery and delivery syncs",
+    "description": "Cross-functional squad of 12 (4 engineers, 2 designers, 1 data analyst, 1 PM). We own the developer-facing API, CLI, SDKs, and docs portal."
+  },
+  "process": {
+    "stages": [
+      { "name": "Hiring Manager Intro", "duration_minutes": 30, "type": "screening" },
+      { "name": "Product Case Study (async)", "duration_minutes": 180, "type": "case_study" },
+      { "name": "Case Study Debrief + Engineering Panel", "duration_minutes": 60, "type": "technical" },
+      { "name": "Executive Interview", "duration_minutes": 45, "type": "behavioral" }
+    ],
+    "total_duration_days": 28,
+    "decision_timeline": "Feedback within 5 business days of each stage",
+    "application_url": "https://jobs.nexus.example/apply/pm-2026-003",
+    "direct_apply": true,
+    "accepts_otp_profile": true,
+    "ai_screening": false
+  },
+  "culture": {
+    "values": ["customer empathy", "speed with quality", "radical candor", "inclusive by default"],
+    "work_style": ["documentation-first", "async decision-making", "monthly all-hands", "quarterly team retreats"],
+    "special_commitments": ["B Corp certified", "Carbon-neutral operations since 2023"],
+    "diversity_statement": "We actively seek candidates from underrepresented backgrounds in tech.",
+    "employer_overview": "Nexus provides the deployment and observability backbone for 20,000+ engineering teams. Series B ($42M), 120 employees, fully remote."
+  },
+  "visibility": {
+    "salary": "public",
+    "team_details": true,
+    "process_stages": true,
+    "hiring_manager": false
+  }
+}

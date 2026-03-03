@@ -3,10 +3,14 @@
  * Open Talent Protocol – Validator CLI
  *
  * Usage:
- *   node dist/index.js <path-to-otp-document.json>
+ *   node dist/index.js [--schema otp|ojp] <path-to-document.json>
  *
- * Validates the given JSON file against the Open Talent Protocol schema (v0.1)
- * and prints a human-readable result.
+ * Validates the given JSON file against the Open Talent Protocol (OTP) or
+ * Open Job Protocol (OJP) schema (v0.1) and prints a human-readable result.
+ *
+ * When --schema is omitted, the schema is auto-detected from the document:
+ *   - meta.schemaVersion present → OTP
+ *   - meta.version present       → OJP
  */
 
 import { readFileSync } from "fs";
@@ -21,10 +25,14 @@ import type { ErrorObject } from "ajv";
 // Resolve paths
 // ---------------------------------------------------------------------------
 
-// The schema lives two directories up from tools/validator-cli/src/
-const SCHEMA_PATH = resolve(
+const OTP_SCHEMA_PATH = resolve(
   __dirname,
   "../../../schema/opentalent-protocol.schema.json"
+);
+
+const OJP_SCHEMA_PATH = resolve(
+  __dirname,
+  "../../../schema/openjob-protocol.schema.json"
 );
 
 // ---------------------------------------------------------------------------
@@ -32,22 +40,33 @@ const SCHEMA_PATH = resolve(
 // ---------------------------------------------------------------------------
 
 function main(): void {
-  const args = process.argv.slice(2);
+  const rawArgs = process.argv.slice(2);
 
-  if (args.length === 0 || args[0] === "--help" || args[0] === "-h") {
+  if (rawArgs.length === 0 || rawArgs[0] === "--help" || rawArgs[0] === "-h") {
     printUsage();
     process.exit(0);
   }
 
-  const documentPath = resolve(args[0]);
-
-  // Load the schema
-  let schema: unknown;
-  try {
-    schema = JSON.parse(readFileSync(SCHEMA_PATH, "utf8"));
-  } catch (err) {
-    fatal(`Could not load schema from ${SCHEMA_PATH}: ${(err as Error).message}`);
+  // Parse --schema flag
+  let schemaHint: "otp" | "ojp" | null = null;
+  const args: string[] = [];
+  for (let i = 0; i < rawArgs.length; i++) {
+    if (rawArgs[i] === "--schema") {
+      const val = rawArgs[++i];
+      if (val !== "otp" && val !== "ojp") {
+        fatal(`--schema must be 'otp' or 'ojp', got '${val}'`);
+      }
+      schemaHint = val as "otp" | "ojp";
+    } else {
+      args.push(rawArgs[i]);
+    }
   }
+
+  if (args.length === 0) {
+    fatal("No document path provided. Run with --help for usage.");
+  }
+
+  const documentPath = resolve(args[0]);
 
   // Load the document
   let document: unknown;
@@ -57,6 +76,20 @@ function main(): void {
     fatal(
       `Could not read document at ${documentPath}: ${(err as Error).message}`
     );
+  }
+
+  // Determine schema type
+  const schemaType = schemaHint ?? detectSchema(document);
+  const schemaPath = schemaType === "ojp" ? OJP_SCHEMA_PATH : OTP_SCHEMA_PATH;
+  const schemaLabel =
+    schemaType === "ojp" ? "Open Job Protocol" : "Open Talent Protocol";
+
+  // Load the schema
+  let schema: unknown;
+  try {
+    schema = JSON.parse(readFileSync(schemaPath, "utf8"));
+  } catch (err) {
+    fatal(`Could not load schema from ${schemaPath}: ${(err as Error).message}`);
   }
 
   // Set up AJV with draft-2020-12 support
@@ -71,10 +104,10 @@ function main(): void {
   const valid = validate(document);
 
   if (valid) {
-    console.log("\n✓ Valid Open Talent Protocol document\n");
+    console.log(`\n✓ Valid ${schemaLabel} document\n`);
     process.exit(0);
   } else {
-    console.error("\n✗ Invalid Open Talent Protocol document\n");
+    console.error(`\n✗ Invalid ${schemaLabel} document\n`);
     console.error("Validation errors:");
 
     for (const error of validate.errors ?? []) {
@@ -86,6 +119,28 @@ function main(): void {
     console.error("");
     process.exit(1);
   }
+}
+
+// ---------------------------------------------------------------------------
+// Auto-detect schema from document structure
+// ---------------------------------------------------------------------------
+
+function detectSchema(doc: unknown): "otp" | "ojp" {
+  if (
+    doc !== null &&
+    typeof doc === "object" &&
+    "meta" in (doc as Record<string, unknown>)
+  ) {
+    const meta = (doc as Record<string, unknown>).meta;
+    if (
+      meta !== null &&
+      typeof meta === "object" &&
+      "version" in (meta as Record<string, unknown>)
+    ) {
+      return "ojp";
+    }
+  }
+  return "otp";
 }
 
 // ---------------------------------------------------------------------------
@@ -122,14 +177,19 @@ function printUsage(): void {
 Open Talent Protocol Validator v0.1
 
 Usage:
-  otp-validate <document.json>
+  otp-validate [--schema otp|ojp] <document.json>
 
 Options:
-  -h, --help    Show this help message
+  --schema otp   Validate against the Open Talent Protocol schema
+  --schema ojp   Validate against the Open Job Protocol schema
+  -h, --help     Show this help message
+
+  When --schema is omitted, the schema is auto-detected from the document.
 
 Examples:
   otp-validate examples/developer-junior.json
-  otp-validate my-profile.json
+  otp-validate --schema ojp examples/backend-engineer-berlin.json
+  otp-validate --schema otp my-profile.json
 
 Exit codes:
   0  Document is valid
