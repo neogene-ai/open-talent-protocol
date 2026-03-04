@@ -1,0 +1,25 @@
+{
+  "name": "@opentalentprotocol/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server exposing Open Talent Protocol and Open Job Protocol agent tools",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && npm run build:agent-examples",
+    "build:agent-examples": "cd ../agent-examples && npm install && npm run build",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
